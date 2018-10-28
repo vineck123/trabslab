@@ -89,17 +89,17 @@ void add_node(patient*&first, int &size){
         }else if(new_node->priority <= first->priority) {
             add_end(first, new_node);
         }
-    }else {
+    }else { // caso haja + de 1 nó
         patient *last;
         last = first->end;
         int i = 0;
 
-        if (new_node->priority <= last->priority) {
+        if (new_node->priority <= last->priority) { //se o novo nó tem prioridade <= ao último nó
             add_end(first, new_node);
-        }else if(new_node->priority > first->priority) {
+        }else if(new_node->priority > first->priority) { // se o novo nó tem prioridade > que o primeiro nó
             add_top(first, new_node);
         }else{
-            while(new_node->priority <= actual->priority) {
+            while(new_node->priority <= actual->priority) { //caso ele não tenha a maior, nem menor prioridade, ou seja, adc no meio
                 before = actual;
                 actual = actual->next;
                 i++;
@@ -107,7 +107,7 @@ void add_node(patient*&first, int &size){
             add_middle(before, new_node);
         }
     }
-    size++;
+    size++; //contador do tamanho
 
 } //                                   |
 //---------------------------------------------------------------------------------|
