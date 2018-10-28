@@ -4,7 +4,7 @@
 #include <unistd.h> //                                                             |
 #include <cstring> //                                                              |
 //---------------------------------------------------------------------------------|
-//protótipos abaixo                                                                |
+//struct utilizada                                                                 |
 //---------------------------------------------------------------------------------|
 struct patient {
     int priority;
@@ -40,7 +40,7 @@ int main() {
     }while(option != 0);
 } //                                                                |
 //---------------------------------------------------------------------------------|
-//procedimento que faz o menu                                                      |
+//procedimento que faz o menu
 void menu(int &option, int &size, patient*&first) {
     printf("Informe o que deseja fazer:\n");
     printf("1)Adicionar pacientes.\n");
@@ -69,7 +69,7 @@ void menu(int &option, int &size, patient*&first) {
     system("clear");
 } //                         |
 //---------------------------------------------------------------------------------|
-//procedimento que adiciona um nó                                                  |
+//procedimento que adiciona um nó
 void add_node(patient*&first, int &size){
     patient * new_node, *actual, *before;
 
@@ -111,7 +111,7 @@ void add_node(patient*&first, int &size){
 
 } //                                   |
 //---------------------------------------------------------------------------------|
-//função de receber dados                                                          |
+//função de receber dados
 patient* get_data (patient*&new_node, patient * first) {
 
     patient * last;
@@ -135,7 +135,7 @@ patient* get_data (patient*&new_node, patient * first) {
     return new_node;
 } //                    |
 //---------------------------------------------------------------------------------|
-//procedimento de adicionar no começo                                              |
+//procedimento de adicionar no começo
 void add_top (patient*&first, patient*&new_node) {
     patient * swap_aux;
 
@@ -147,18 +147,13 @@ void add_top (patient*&first, patient*&new_node) {
     first->end = new_node;
 } //                          |
 //---------------------------------------------------------------------------------|
-<<<<<<< HEAD
-=======
-//procedimento que adiciona no fim                                                 |
-//---------------------------------------------------------------------------------|
->>>>>>> dccd7a1504f0d3268b1d734b5d10416e7bd47bd9
-//procedimento que adiciona no meio da lista                                       |
+//procedimento que adiciona no meio da lista
 void add_middle(patient*&before, patient*&new_node) {
     new_node->next = before->next;
     before->next = new_node;
 } //                       |
 //---------------------------------------------------------------------------------|
-//procedimento que exibe a lista                                                   |
+//procedimento que exibe a lista
 void show_list (patient*&first, int size) {
 
     patient * actual;
@@ -180,7 +175,7 @@ void show_list (patient*&first, int size) {
     system("clear");
 } //                                 |
 //---------------------------------------------------------------------------------|
-//procedimento que faz o atendimento dos pacientes                                 |
+//procedimento que faz o atendimento dos pacientes
 void attend(patient*&first, int size) {
     char aux_name[11] = {' ','-', 'A', 'T' , 'E', 'N', 'D', 'I', 'D', 'O'};
     int tempo;
@@ -206,7 +201,7 @@ void attend(patient*&first, int size) {
     }
 } //                                     |
 //---------------------------------------------------------------------------------|
-//procedimento que adiciona no fim                                                 |
+//procedimento que adiciona no fim
 void add_end(patient*&first,patient*&new_node) {
     patient * last;
     last = first->end;
