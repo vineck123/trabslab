@@ -65,6 +65,7 @@ void menu(int &option, int &size, patient*&first) {
             break;
         default:
             printf("Esta funcionalidade não existe.\n");
+            sleep(2);
     }
     system("clear");
 } //                         |
@@ -72,13 +73,13 @@ void menu(int &option, int &size, patient*&first) {
 //procedimento que adiciona um nó
 void add_node(patient*&first, int &size){
     patient * new_node, *actual, *before;
-
     actual = first;
+
     new_node = (patient*) calloc (1,sizeof(patient));
 
     new_node = get_data(new_node, first);
 
-    //aqui o código checa se o primeiro nó está vazio, e aloca o novo nó à ele caso seja verdadeiro
+    //aqui o código checa se o primeiro nó está vazio, e aloca o novo nó a ele caso seja verdadeiro
     if(first == nullptr) {
         first = new_node;
         first->next = new_node;
@@ -117,9 +118,9 @@ patient* get_data (patient*&new_node, patient * first) {
     patient * last;
     last = first;
 
-    if (first == nullptr) {
+    if (first == nullptr) { //caso o primeiro ponteiro seja null, seu código é 1
         new_node->id = 1;
-    }else{
+    }else{// caso não seja, é igual ao último->id + 1
         new_node->id = last->id +1;
     }
 
