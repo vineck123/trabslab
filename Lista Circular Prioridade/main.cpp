@@ -195,9 +195,14 @@ void attend(patient*&first, int size) {
         sleep(tempo);
         size--;
         swap(first);
-        printf("\nDeseja atender outro paciente? S-N.\n");
-        printf("Ainda existe(m) %d paciente(s) na fila.\n\n", size);
-        scanf(" %c", &verify);
+        if(first->next != first) {
+            printf("\nDeseja atender outro paciente? S-N.\n");
+            printf("Ainda existe(m) %d paciente(s) na fila.\n\n", size);
+            scanf(" %c", &verify);
+        }else{
+            printf("\nTodos os pacientes foram atendidos!\n");
+            sleep(3);
+        }
         system("clear");
     }
 } //                                     |
@@ -213,15 +218,17 @@ void add_end(patient*&first,patient*&new_node) {
 } //                            |
 //---------------------------------------------------------------------------------|
 void swap(patient *&start) {
-    patient *aux=nullptr,*aux1=nullptr;
+    patient *aux,*aux1;
     aux=start;
-    while(aux->next!=start) {
-        aux1=aux;
-        aux=aux->next;
+    if(start->next != start) {
+        while (aux->next != start) {
+            aux1 = aux;
+            aux = aux->next;
+        }
+        aux1->next = start;
+        aux->next = start->next;
+        start->next = aux;
+        start = aux;
     }
-    aux1->next=start;
-    aux->next=start->next;
-    start->next=aux;
-    start=aux;
 } //                                                |
 //---------------------------------------------------------------------------------|

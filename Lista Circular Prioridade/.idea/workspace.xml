@@ -35,6 +35,8 @@
   <component name="ChangeListManager">
     <list default="true" id="74f10c29-7c91-4c1d-aa76-f776b20a8255" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +85,7 @@
     <session id="-1699920281">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
@@ -91,22 +93,22 @@
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.37" value="1" />
           <entry key="project.open.time.6" value="3" />
-          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="5" />
           <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cpp" value="8485" />
-          <entry key="txt" value="128" />
+          <entry key="cpp" value="9200" />
+          <entry key="txt" value="162" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="ObjectiveC" value="8485" />
-          <entry key="PLAIN_TEXT" value="128" />
+          <entry key="ObjectiveC" value="9200" />
+          <entry key="PLAIN_TEXT" value="162" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -122,7 +124,23 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="462">
+              <caret line="203" column="21" selection-start-line="203" selection-start-column="21" selection-end-line="203" selection-end-column="21" />
+              <folding>
+                <element signature="e#1786#2381#0" />
+                <element signature="e#6358#7034#0" />
+                <element signature="e#8164#8460#0" />
+                <element signature="e#8493#8825#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -246,6 +264,8 @@
       <workItem from="1540765042787" duration="140000" />
       <workItem from="1540766847094" duration="1482000" />
       <workItem from="1540769533371" duration="26000" />
+      <workItem from="1540771012729" duration="1025000" />
+      <workItem from="1540772086799" duration="346000" />
     </task>
     <task id="LOCAL-00001" summary="Teste de change commit via CLion">
       <created>1540764743529</created>
@@ -289,11 +309,18 @@
       <option name="project" value="LOCAL" />
       <updated>1540768729204</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Pequenos ajustes e comentários.">
+      <created>1540771839853</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1540771839853</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20998000" />
+    <option name="totallyTimeSpent" value="22369000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -306,20 +333,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.30757576" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32682925" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32520324" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32901135" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="TeamCity" order="8" />
-      <window_info active="true" anchor="bottom" id="Messages" order="9" visible="true" weight="0.32520324" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32520324" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="12" show_stripe_button="false" />
@@ -345,7 +373,8 @@
     <MESSAGE value="Another test via CLion" />
     <MESSAGE value="Arrumar os procedimentos de adicionar no fim" />
     <MESSAGE value="Fazendo os comentários" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fazendo os comentários" />
+    <MESSAGE value="Pequenos ajustes e comentários." />
+    <option name="LAST_COMMIT_MESSAGE" value="Pequenos ajustes e comentários." />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/Downloads/portuguese.dic">
@@ -361,8 +390,14 @@
     <entry file="file://$PROJECT_DIR$/Trabalho_Lista_Circular_Prioridade.cpp" />
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
-          <caret line="109" column="33" selection-start-line="109" selection-start-column="33" selection-end-line="109" selection-end-column="33" />
+        <state relative-caret-position="462">
+          <caret line="203" column="21" selection-start-line="203" selection-start-column="21" selection-end-line="203" selection-end-column="21" />
+          <folding>
+            <element signature="e#1786#2381#0" />
+            <element signature="e#6358#7034#0" />
+            <element signature="e#8164#8460#0" />
+            <element signature="e#8493#8825#0" />
+          </folding>
         </state>
       </provider>
     </entry>
