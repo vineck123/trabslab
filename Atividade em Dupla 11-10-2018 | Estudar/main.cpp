@@ -1,3 +1,5 @@
+//pinto
+
 #include <iostream>
 #include <cstdio>
 #include <cstdlib>
@@ -115,8 +117,9 @@ void release_last(Aluno *&first) {
 
 void exibir(Aluno*&first) {
     Aluno * atual = first;
+    system("clear");
     while(atual != nullptr) {
-        system("clear");
+        printf("\n--------------------------\n");
         printf("Código: %d\n", atual->mat);
         printf("Nome: %s\n", atual->nome);
         printf("Nota: %.1f\n", atual->nota);
@@ -127,5 +130,4 @@ void exibir(Aluno*&first) {
         sleep(5);
         atual = atual->proximo;
     }
-
 }
