@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.12)
+project(Atividade_em_Dupla_11_10_2018___Estudar)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(Atividade_em_Dupla_11_10_2018___Estudar main.cpp)
