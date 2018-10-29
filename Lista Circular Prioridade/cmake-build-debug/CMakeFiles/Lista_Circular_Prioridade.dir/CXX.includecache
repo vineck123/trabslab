@@ -7,12 +7,12 @@
 #IncludeRegexTransform: 
 
 /home/vinicius/Área de Trabalho/Códigos/Lista Circular Prioridade/main.cpp
-stdio.h
+cstdio
 -
-stdlib.h
+cstdlib
 -
 unistd.h
 -
-string.h
+cstring
 -
 
