@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/vinicius/Área de Trabalho/Códigos/Atividade Avaliativa 11-10-2018 | Estudar/main.cpp
+cstdio
+-
+cstdlib
+-
+cstring
+-
+unistd.h
+-
+
