@@ -30,7 +30,7 @@ int main() {
 void menu(int &option, Aluno*&first) {
     system("clear");
 
-    printf("Digite a opção desejada:\n1)Adicionar\n2)Remover no fim\n3)Exibir\n\n");
+    printf("Digite a opção desejada:\n1)Adicionar.\n2)Remover no fim.\n3)Exibir.\n0)Sair.\n\n");
     scanf("%d", &option);
 
     switch(option) {
@@ -117,15 +117,16 @@ void exibir(Aluno*&first) {
     Aluno * atual = first;
     system("clear");
     while(atual != nullptr) {
-        printf("\n--------------------------\n");
+        printf("--------------------------\n");
         printf("Código: %d\n", atual->mat);
         printf("Nome: %s\n", atual->nome);
         printf("Nota: %.1f\n", atual->nota);
         printf("Sexo: %c\n", atual->sexo);
         if(atual->proximo == nullptr) {
-            printf("\n--------------------------\n");
+            printf("--------------------------\n");
         }
-        sleep(5);
+        ;
         atual = atual->proximo;
     }
+    sleep(5);
 }
