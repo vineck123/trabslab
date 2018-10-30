@@ -1,0 +1,26 @@
+Detecting C [-std=c11] compiler features failed to compile with the following output:
+Change Dir: /home/vinicius/Área de Trabalho/Códigos/Atividade em Dupla 11-10-2018 | Estudar/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ba6c4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ba6c4.dir/build.make CMakeFiles/cmTC_ba6c4.dir/build
+make[1]: Entering directory '/home/vinicius/Área de Trabalho/Códigos/Atividade em Dupla 11-10-2018 | Estudar/cmake-build-debug/CMakeFiles/CMakeTmp'
+make[1]: *** No rule to make target '/home/vinicius/Área de Trabalho/Códigos/Atividade em Dupla 11-10-2018 ', needed by 'CMakeFiles/cmTC_ba6c4.dir/feature_tests.c.o'.  Pare.
+make[1]: Leaving directory '/home/vinicius/Área de Trabalho/Códigos/Atividade em Dupla 11-10-2018 | Estudar/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_ba6c4/fast' failed
+make: *** [cmTC_ba6c4/fast] Error 2
+
+
+
+Detecting CXX [-std=c++1z] compiler features failed to compile with the following output:
+Change Dir: /home/vinicius/Área de Trabalho/Códigos/Atividade em Dupla 11-10-2018 | Estudar/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cbdfb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cbdfb.dir/build.make CMakeFiles/cmTC_cbdfb.dir/build
+make[1]: Entering directory '/home/vinicius/Área de Trabalho/Códigos/Atividade em Dupla 11-10-2018 | Estudar/cmake-build-debug/CMakeFiles/CMakeTmp'
+make[1]: *** No rule to make target '/home/vinicius/Área de Trabalho/Códigos/Atividade em Dupla 11-10-2018 ', needed by 'CMakeFiles/cmTC_cbdfb.dir/feature_tests.cxx.o'.  Pare.
+make[1]: Leaving directory '/home/vinicius/Área de Trabalho/Códigos/Atividade em Dupla 11-10-2018 | Estudar/cmake-build-debug/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_cbdfb/fast' failed
+make: *** [cmTC_cbdfb/fast] Error 2
+
+
+

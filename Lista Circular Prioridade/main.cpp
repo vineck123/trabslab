@@ -17,7 +17,7 @@ struct patient {
 //prototypes                                                                       |
 void menu(int &option, int &size, patient*&first); //                              |
 void add_node(patient*&first, int &size); //                                       |
-patient* get_data (patient*&new_node, patient * first); //                         |
+patient* get_data (patient*&new_node,int size); //                         |
 void add_top (patient*&first, patient*&new_node); //                               |
 void add_middle(patient*&before, patient*&new_node); //                            |
 void show_list (patient*&first, int size); //                                      |
@@ -32,7 +32,7 @@ void swap(patient *&start); //                                                  
 int main() {
     int size=0, option;
     patient * first;
-    first = nullptr;
+    first = NULL;
 
     system("clear");
     do{
@@ -77,10 +77,10 @@ void add_node(patient*&first, int &size){
 
     new_node = (patient*) calloc (1,sizeof(patient));
 
-    new_node = get_data(new_node, first);
+    new_node = get_data(new_node, first,size);
 
     //aqui o código checa se o primeiro nó está vazio, e aloca o novo nó a ele caso seja verdadeiro
-    if(first == nullptr) {
+    if(first == NULL) {
         first = new_node;
         first->next = new_node;
         first->end = first;
@@ -90,7 +90,7 @@ void add_node(patient*&first, int &size){
         }else if(new_node->priority <= first->priority) {
             add_end(first, new_node);
         }
-    }else { // caso haja + de 1 nó
+    }else{ // caso haja + de 1 nó
         patient *last;
         last = first->end;
         int i = 0;
@@ -113,16 +113,10 @@ void add_node(patient*&first, int &size){
 } //                                   |
 //---------------------------------------------------------------------------------|
 //função de receber dados
-patient* get_data (patient*&new_node, patient * first) {
+patient* get_data (patient*&new_node,int size) {
 
-    patient * last;
-    last = first;
 
-    if (first == nullptr) { //caso o primeiro ponteiro seja null, seu código é 1
-        new_node->id = 1;
-    }else{// caso não seja, é igual ao último->id + 1
-        new_node->id = last->id +1;
-    }
+    new_node->id = size+1;
 
     do {
         printf("Digite a prioridade, sendo 1 comum e 5 a mais alta:\n");
@@ -187,15 +181,18 @@ void attend(patient*&first, int size) {
 
         printf("------------------------------------------------\n");
         printf("Nome do paciente: %s\n", first->name);
-        printf("Será atendido por %d segundo(s)\n", first->priority*2);
         printf("Preferência: %d.\n", first->priority);
         printf("Código do paciente: %d.\n", first->id);
         strcat(first->name, aux_name);
         printf("------------------------------------------------\n");
-        sleep(tempo);
+        for(int i = tempo; i >= 0; i--) {
+            printf("Será atendido por %d segundo(s)\n", i);
+            sleep(1);
+        }
+
         size--;
         swap(first);
-        if(first->next != first) {
+        if(size > 0) {
             printf("\nDeseja atender outro paciente? S-N.\n");
             printf("Ainda existe(m) %d paciente(s) na fila.\n\n", size);
             scanf(" %c", &verify);
@@ -218,17 +215,12 @@ void add_end(patient*&first,patient*&new_node) {
 } //                            |
 //---------------------------------------------------------------------------------|
 void swap(patient *&start) {
-    patient *aux,*aux1;
+    patient *aux;
     aux=start;
-    if(start->next != start) {
-        while (aux->next != start) {
-            aux1 = aux;
-            aux = aux->next;
-        }
-        aux1->next = start;
-        aux->next = start->next;
-        start->next = aux;
-        start = aux;
-    }
-} //                                                |
+
+    start->end->next = aux;
+    start = start->next;
+    start->end = aux;
+    aux->next = start;
+}
 //---------------------------------------------------------------------------------|

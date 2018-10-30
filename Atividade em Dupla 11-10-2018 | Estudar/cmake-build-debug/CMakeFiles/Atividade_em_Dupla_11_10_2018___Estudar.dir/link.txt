@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Atividade_em_Dupla_11_10_2018___Estudar.dir/main.cpp.o  -o Atividade_em_Dupla_11_10_2018___Estudar 
