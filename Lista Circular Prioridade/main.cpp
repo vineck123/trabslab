@@ -77,7 +77,7 @@ void add_node(patient*&first, int &size){
 
     new_node = (patient*) calloc (1,sizeof(patient));
 
-    new_node = get_data(new_node, first,size);
+    new_node = get_data(new_node, size);
 
     //aqui o código checa se o primeiro nó está vazio, e aloca o novo nó a ele caso seja verdadeiro
     if(first == NULL) {
@@ -185,7 +185,7 @@ void attend(patient*&first, int size) {
         printf("Código do paciente: %d.\n", first->id);
         strcat(first->name, aux_name);
         printf("------------------------------------------------\n");
-        for(int i = tempo; i >= 0; i--) {
+        for(int i = tempo; i > 0; i--) {
             printf("Será atendido por %d segundo(s)\n", i);
             sleep(1);
         }
