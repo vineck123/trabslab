@@ -4,7 +4,7 @@
 #include <unistd.h>
 
 struct aluno {
-    int mat=0;
+    int mat;
     char nome[80];
     float nota;
     char sexo;
