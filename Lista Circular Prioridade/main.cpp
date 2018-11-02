@@ -57,6 +57,8 @@ void menu(int &option, int &size, patient*&first) {
             break;
         case 2:
             show_list(first, size);
+            sleep(10);
+            system("clear");
             break;
         case 3:
             attend(first, size);
@@ -166,14 +168,13 @@ void show_list (patient*&first, int size) {
         actual=actual->next;
         size--;
     }
-    sleep(10);
-    system("clear");
 } //                                 |
 //---------------------------------------------------------------------------------|
 //procedimento que faz o atendimento dos pacientes
 void attend(patient*&first, int size) {
     char aux_name[11] = {' ','-', 'A', 'T' , 'E', 'N', 'D', 'I', 'D', 'O'};
-    int tempo;
+    int tempo, size2;
+    size2 = size;
     char verify='s';
     while(size > 0 && verify == 's' || verify == 'S') {
 
@@ -189,9 +190,11 @@ void attend(patient*&first, int size) {
             printf("Será atendido por %d segundo(s)\n", i);
             sleep(1);
         }
-
         size--;
         swap(first);
+        printf("\n");
+        printf("Lista atualizada de pacientes: \n");
+        show_list(first, size2);
         if(size > 0) {
             printf("\nDeseja atender outro paciente? S-N.\n");
             printf("Ainda existe(m) %d paciente(s) na fila.\n\n", size);
